@@ -75,6 +75,17 @@ class DXMainViewController : UIViewController {
             ),
             
             DXSimpleTableViewSectionInfo.init(
+                clazzTitle: "Tmp",
+                cellInfos: [
+                    DXSimpleTableViewCellInfo.init(titleText: "Child View Controllers", selectedBlock: {
+                        [weak self] ()->() in
+                            let vc = UIStoryboard.init(name: "DDifferentPageVC", bundle: Bundle.init(for: DDifferentPageVC.classForCoder())).instantiateInitialViewController()
+                            self?.pushViewCtl(viewCtl: vc)
+                    }),
+                ]
+            ),
+            
+            DXSimpleTableViewSectionInfo.init(
                 clazzTitle: "About",
                 cellInfos: [
                     DXSimpleTableViewCellInfo.init(titleText: "About Me", selectedBlock:

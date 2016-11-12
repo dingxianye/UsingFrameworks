@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="11542" systemVersion="16B2555" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES" initialViewController="217-UU-i0c">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="11524"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Different PageVC-->
+        <scene sceneID="VI1-JE-Cvu">
+            <objects>
+                <viewController id="217-UU-i0c" customClass="DDifferentPageVC" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="l1w-cd-Pse"/>
+                        <viewControllerLayoutGuide type="bottom" id="Ij5-RI-bX4"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="gNz-6D-dl6">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="vYm-uI-CI2">
+                                <rect key="frame" x="0.0" y="20" width="375" height="30"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5X4-sc-Kp1">
+                                        <rect key="frame" x="0.0" y="0.0" width="187.5" height="30"/>
+                                        <color key="backgroundColor" red="0.77239920070000001" green="1" blue="0.75419089549999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Beauty"/>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="vbM-Hd-b36">
+                                        <rect key="frame" x="187.5" y="0.0" width="187.5" height="30"/>
+                                        <color key="backgroundColor" red="0.88877113689999998" green="0.99178538670000005" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                        <state key="normal" title="Handsome"/>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <constraints>
+                                    <constraint firstItem="5X4-sc-Kp1" firstAttribute="leading" secondItem="vYm-uI-CI2" secondAttribute="leading" id="JKA-j2-bVi"/>
+                                    <constraint firstAttribute="bottom" secondItem="vbM-Hd-b36" secondAttribute="bottom" id="Mdb-2q-SaP"/>
+                                    <constraint firstItem="vbM-Hd-b36" firstAttribute="width" secondItem="5X4-sc-Kp1" secondAttribute="width" id="QlZ-Rt-uOt"/>
+                                    <constraint firstItem="vbM-Hd-b36" firstAttribute="leading" secondItem="5X4-sc-Kp1" secondAttribute="trailing" id="W0F-tq-RNg"/>
+                                    <constraint firstItem="vbM-Hd-b36" firstAttribute="top" secondItem="vYm-uI-CI2" secondAttribute="top" id="Xxl-wd-yiQ"/>
+                                    <constraint firstItem="5X4-sc-Kp1" firstAttribute="top" secondItem="vYm-uI-CI2" secondAttribute="top" id="m9o-hX-Zhb"/>
+                                    <constraint firstAttribute="bottom" secondItem="5X4-sc-Kp1" secondAttribute="bottom" id="rVm-KC-oTk"/>
+                                    <constraint firstAttribute="trailing" secondItem="vbM-Hd-b36" secondAttribute="trailing" id="z6U-PX-M98"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="tBS-dl-h97">
+                                <rect key="frame" x="0.0" y="50" width="375" height="617"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                            </view>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Ij5-RI-bX4" firstAttribute="top" secondItem="tBS-dl-h97" secondAttribute="bottom" id="3I2-DR-bNX"/>
+                            <constraint firstItem="vYm-uI-CI2" firstAttribute="top" secondItem="l1w-cd-Pse" secondAttribute="bottom" id="6cg-4L-Azb"/>
+                            <constraint firstItem="tBS-dl-h97" firstAttribute="leading" secondItem="gNz-6D-dl6" secondAttribute="leading" id="Uw2-FU-hu7"/>
+                            <constraint firstAttribute="trailing" secondItem="vYm-uI-CI2" secondAttribute="trailing" id="dPd-4V-L7W"/>
+                            <constraint firstItem="tBS-dl-h97" firstAttribute="top" secondItem="vYm-uI-CI2" secondAttribute="bottom" id="m4G-sw-hQm"/>
+                            <constraint firstItem="vYm-uI-CI2" firstAttribute="leading" secondItem="gNz-6D-dl6" secondAttribute="leading" id="q3s-aW-A0T"/>
+                            <constraint firstAttribute="trailing" secondItem="tBS-dl-h97" secondAttribute="trailing" id="rmA-K4-iJR"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="beautyBtn" destination="5X4-sc-Kp1" id="1JS-Oo-4Q1"/>
+                        <outlet property="containerView" destination="tBS-dl-h97" id="Yc1-Ex-zrb"/>
+                        <outlet property="handsomeBtn" destination="vbM-Hd-b36" id="Tfa-hD-wIK"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Opj-Y3-e3J" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-329" y="211"/>
+        </scene>
+    </scenes>
+</document>

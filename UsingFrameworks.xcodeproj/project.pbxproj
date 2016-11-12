@@ -19,6 +19,11 @@
 		65B9C3F11DD76DFE00042899 /* DXSimpleTableViewSectionInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C3ED1DD76DFE00042899 /* DXSimpleTableViewSectionInfo.swift */; };
 		65B9C3F31DD77E4100042899 /* README.md in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C3F21DD77E4100042899 /* README.md */; };
 		65B9C3F51DD77E4900042899 /* LICENSE in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C3F41DD77E4900042899 /* LICENSE */; };
+		65B9C3F81DD7825200042899 /* UIViewController+DXTransition.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C3F71DD7825200042899 /* UIViewController+DXTransition.m */; };
+		65B9C4011DD7825E00042899 /* DBeautyVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C3FB1DD7825E00042899 /* DBeautyVC.m */; };
+		65B9C4021DD7825E00042899 /* DDifferentPageVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C3FD1DD7825E00042899 /* DDifferentPageVC.m */; };
+		65B9C4031DD7825E00042899 /* DDifferentPageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C3FE1DD7825E00042899 /* DDifferentPageVC.storyboard */; };
+		65B9C4041DD7825E00042899 /* DHandsomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C4001DD7825E00042899 /* DHandsomeVC.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -38,6 +43,15 @@
 		65B9C3ED1DD76DFE00042899 /* DXSimpleTableViewSectionInfo.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DXSimpleTableViewSectionInfo.swift; sourceTree = "<group>"; };
 		65B9C3F21DD77E4100042899 /* README.md */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = net.daringfireball.markdown; path = README.md; sourceTree = "<group>"; };
 		65B9C3F41DD77E4900042899 /* LICENSE */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = LICENSE; sourceTree = "<group>"; };
+		65B9C3F61DD7825200042899 /* UIViewController+DXTransition.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIViewController+DXTransition.h"; sourceTree = "<group>"; };
+		65B9C3F71DD7825200042899 /* UIViewController+DXTransition.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIViewController+DXTransition.m"; sourceTree = "<group>"; };
+		65B9C3FA1DD7825E00042899 /* DBeautyVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DBeautyVC.h; sourceTree = "<group>"; };
+		65B9C3FB1DD7825E00042899 /* DBeautyVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DBeautyVC.m; sourceTree = "<group>"; };
+		65B9C3FC1DD7825E00042899 /* DDifferentPageVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DDifferentPageVC.h; sourceTree = "<group>"; };
+		65B9C3FD1DD7825E00042899 /* DDifferentPageVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DDifferentPageVC.m; sourceTree = "<group>"; };
+		65B9C3FE1DD7825E00042899 /* DDifferentPageVC.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DDifferentPageVC.storyboard; sourceTree = "<group>"; };
+		65B9C3FF1DD7825E00042899 /* DHandsomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHandsomeVC.h; sourceTree = "<group>"; };
+		65B9C4001DD7825E00042899 /* DHandsomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHandsomeVC.m; sourceTree = "<group>"; };
 		A758681ECEAFB38729850F07 /* Pods-UsingFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsingFrameworks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsingFrameworks/Pods-UsingFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0A5B58D15478AD185335A9 /* libPods-UsingFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UsingFrameworks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -144,6 +158,7 @@
 		65B9C3D21DD758A600042899 /* Tmp */ = {
 			isa = PBXGroup;
 			children = (
+				65B9C3F91DD7825E00042899 /* ChildViewController */,
 			);
 			path = Tmp;
 			sourceTree = "<group>";
@@ -159,6 +174,8 @@
 		65B9C3E61DD76DFE00042899 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				65B9C3F61DD7825200042899 /* UIViewController+DXTransition.h */,
+				65B9C3F71DD7825200042899 /* UIViewController+DXTransition.m */,
 			);
 			path = UIKit;
 			sourceTree = "<group>";
@@ -179,6 +196,20 @@
 				65B9C3ED1DD76DFE00042899 /* DXSimpleTableViewSectionInfo.swift */,
 			);
 			path = DXSimpleTableView;
+			sourceTree = "<group>";
+		};
+		65B9C3F91DD7825E00042899 /* ChildViewController */ = {
+			isa = PBXGroup;
+			children = (
+				65B9C3FA1DD7825E00042899 /* DBeautyVC.h */,
+				65B9C3FB1DD7825E00042899 /* DBeautyVC.m */,
+				65B9C3FC1DD7825E00042899 /* DDifferentPageVC.h */,
+				65B9C3FD1DD7825E00042899 /* DDifferentPageVC.m */,
+				65B9C3FE1DD7825E00042899 /* DDifferentPageVC.storyboard */,
+				65B9C3FF1DD7825E00042899 /* DHandsomeVC.h */,
+				65B9C4001DD7825E00042899 /* DHandsomeVC.m */,
+			);
+			path = ChildViewController;
 			sourceTree = "<group>";
 		};
 		712E8C0928D723DBFB36F1AD /* Pods */ = {
@@ -256,6 +287,7 @@
 				6551EC2A1DCF647D000C4077 /* LaunchScreen.storyboard in Resources */,
 				6551EC271DCF647D000C4077 /* Assets.xcassets in Resources */,
 				65B9C3F51DD77E4900042899 /* LICENSE in Resources */,
+				65B9C4031DD7825E00042899 /* DDifferentPageVC.storyboard in Resources */,
 				6551EC251DCF647D000C4077 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -316,11 +348,15 @@
 			buildActionMask = 2147483647;
 			files = (
 				65B9C3F11DD76DFE00042899 /* DXSimpleTableViewSectionInfo.swift in Sources */,
+				65B9C3F81DD7825200042899 /* UIViewController+DXTransition.m in Sources */,
 				6551EC331DCF65E5000C4077 /* DXMainViewController.swift in Sources */,
 				65B9C3F01DD76DFE00042899 /* DXSimpleTableViewCellInfo.swift in Sources */,
+				65B9C4011DD7825E00042899 /* DBeautyVC.m in Sources */,
 				65B9C3F31DD77E4100042899 /* README.md in Sources */,
 				65B9C3EF1DD76DFE00042899 /* DXSimpleTableView.swift in Sources */,
+				65B9C4041DD7825E00042899 /* DHandsomeVC.m in Sources */,
 				6551EC1F1DCF647D000C4077 /* AppDelegate.m in Sources */,
+				65B9C4021DD7825E00042899 /* DDifferentPageVC.m in Sources */,
 				6551EC1C1DCF647D000C4077 /* main.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
