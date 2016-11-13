@@ -10,48 +10,60 @@ import UIKit
 
 class DLabelWithAttributedStringVC: UIViewController {
     
-    @IBOutlet weak var stringTextLabel: UILabel!
+    var tableView: DXSimpleTableView!
+    var dataSource: Array<DXSimpleTableViewSectionInfo>!
 
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.white
-        self.title = "Label With AttributedString"
 
-        let attributes = [
-            NSFontAttributeName: UIFont.systemFont(ofSize: 12),
-            NSForegroundColorAttributeName: UIColor.red,
-            NSBackgroundColorAttributeName: UIColor.yellow
+        setupDataSource()
+        
+        tableView = DXSimpleTableView.init(frame: self.view.bounds, style: UITableViewStyle.plain, sectionInfos: dataSource)
+        tableView.autoresizingMask = [.flexibleWidth, .flexibleHeight]
+        self.view.addSubview(tableView)
+    }
+    
+    
+    // MARK: attributedString demos
+    
+    func fontAttributeNameAttributedString() -> NSAttributedString! {
+        let mutAttributedString = NSMutableAttributedString.init()
+        
+        mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.italicSystemFont(ofSize: 20), text: "YES, "))
+        mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.systemFont(ofSize: 16), text: "就要和外面那些"))
+        mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.boldSystemFont(ofSize: 22), text: "妖艳贱货"))
+        mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.systemFont(ofSize: 26), text: "看起来"))
+        mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.italicSystemFont(ofSize: 30), text: "不一样！！！"))  // FIXME: italic Chinese
+        
+        return mutAttributedString.copy() as! NSAttributedString
+    }
+    
+//    NSForegroundColorAttributeName: UIColor.black,
+//    NSBackgroundColorAttributeName: UIColor.yellow,
+//    NSStrokeColorAttributeName: UIColor.orange,
+//    NSStrokeWidthAttributeName: Float(1),
+    
+    
+    // MARK: util to construct NSAttributedString
+    
+    func attributedString(attributeName: String!, attributeValue: Any!, text: String!) -> NSAttributedString! {
+        let attributes = [ attributeName: attributeValue ]
+        return NSAttributedString.init(string: text, attributes: attributes)
+    }
+    
+    
+    // MARK: table view data source
+    
+    func setupDataSource() {
+        dataSource = [
+            DXSimpleTableViewSectionInfo.init(clazzTitle: nil, cellInfos: [
+                DXSimpleTableViewCellInfo.init(titleAttributedText: self.fontAttributeNameAttributedString(), detailText: "NSFontAttributeName visual effect")
+            ])
         ]
-        let attributedText = NSAttributedString.init(string: "嗯，我和外面那些妖艳贱货不一样！！", attributes: attributes)
-        
-        stringTextLabel.attributedText = attributedText
-        self.view.addSubview(stringTextLabel)
-        
-        self.view.addConstraints([
-            NSLayoutConstraint(item: stringTextLabel, attribute: NSLayoutAttribute.top, relatedBy: NSLayoutRelation.equal, toItem: self.topLayoutGuide, attribute: NSLayoutAttribute.bottom, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: stringTextLabel, attribute: NSLayoutAttribute.left, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.left, multiplier: 1, constant: 0),
-            NSLayoutConstraint(item: stringTextLabel, attribute: NSLayoutAttribute.width, relatedBy: NSLayoutRelation.equal, toItem: self.view, attribute: NSLayoutAttribute.width, multiplier: 1, constant: 0)
-            ])
-        
-        stringTextLabel.addConstraints([
-            NSLayoutConstraint(item: stringTextLabel, attribute: NSLayoutAttribute.height, relatedBy: NSLayoutRelation.equal, toItem: nil, attribute: NSLayoutAttribute.notAnAttribute, multiplier: 1, constant: 30)
-            ])
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
-    
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
-    }
-    */
-
 }

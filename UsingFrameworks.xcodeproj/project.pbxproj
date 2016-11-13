@@ -22,7 +22,6 @@
 		65B9C4981DD8178700042899 /* DDifferentPageVC.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C4821DD8178700042899 /* DDifferentPageVC.storyboard */; };
 		65B9C4991DD8178700042899 /* DHandsomeVC.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C4841DD8178700042899 /* DHandsomeVC.m */; };
 		65B9C49A1DD8178700042899 /* DLabelWithAttributedStringVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C4861DD8178700042899 /* DLabelWithAttributedStringVC.swift */; };
-		65B9C49B1DD8178700042899 /* DLabelWithAttributedStringVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C4871DD8178700042899 /* DLabelWithAttributedStringVC.xib */; };
 		65B9C49C1DD8178700042899 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C4891DD8178700042899 /* main.m */; };
 		65B9C49D1DD8178700042899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C48B1DD8178700042899 /* Assets.xcassets */; };
 		65B9C49E1DD8178700042899 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C48C1DD8178700042899 /* Info.plist */; };
@@ -52,7 +51,6 @@
 		65B9C4831DD8178700042899 /* DHandsomeVC.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DHandsomeVC.h; sourceTree = "<group>"; };
 		65B9C4841DD8178700042899 /* DHandsomeVC.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DHandsomeVC.m; sourceTree = "<group>"; };
 		65B9C4861DD8178700042899 /* DLabelWithAttributedStringVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DLabelWithAttributedStringVC.swift; sourceTree = "<group>"; };
-		65B9C4871DD8178700042899 /* DLabelWithAttributedStringVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DLabelWithAttributedStringVC.xib; sourceTree = "<group>"; };
 		65B9C4891DD8178700042899 /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		65B9C48B1DD8178700042899 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		65B9C48C1DD8178700042899 /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -235,7 +233,6 @@
 			isa = PBXGroup;
 			children = (
 				65B9C4861DD8178700042899 /* DLabelWithAttributedStringVC.swift */,
-				65B9C4871DD8178700042899 /* DLabelWithAttributedStringVC.xib */,
 			);
 			path = UILabel;
 			sourceTree = "<group>";
@@ -333,7 +330,6 @@
 				65B9C3F51DD77E4900042899 /* LICENSE in Resources */,
 				65B9C4981DD8178700042899 /* DDifferentPageVC.storyboard in Resources */,
 				65B9C49E1DD8178700042899 /* Info.plist in Resources */,
-				65B9C49B1DD8178700042899 /* DLabelWithAttributedStringVC.xib in Resources */,
 				65B9C49F1DD8178700042899 /* LaunchScreen.storyboard in Resources */,
 				65B9C4911DD8178700042899 /* Main.storyboard in Resources */,
 				65B9C49D1DD8178700042899 /* Assets.xcassets in Resources */,
