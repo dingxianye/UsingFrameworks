@@ -25,6 +25,7 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         self.dataSource = self
         
         self.rowHeight = UITableViewAutomaticDimension
+        self.estimatedRowHeight = 44
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -64,13 +65,23 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
             }
         }
         
-        cell.textLabel?.text = cellInfo.titleText
+        cell.textLabel?.numberOfLines = 0
+        
+        if let _ = cellInfo.titleText {
+            cell.textLabel?.text = cellInfo.titleText
+        } else if let _ = cellInfo.titleAttributedText {
+            cell.textLabel?.attributedText = cellInfo.titleAttributedText
+        }
+        
         if let _ = cellInfo.detailText {
             cell.detailTextLabel?.text = cellInfo.detailText
         }
+        
         cell.accessoryType = .none
+        cell.selectionStyle = UITableViewCellSelectionStyle.none
         if cellInfo.selectedBlock != nil {
             cell.accessoryType = .disclosureIndicator
+            cell.selectionStyle = UITableViewCellSelectionStyle.default
         }
         
         return cell
