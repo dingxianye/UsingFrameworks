@@ -27,6 +27,7 @@
 		65B9C49D1DD8178700042899 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C48B1DD8178700042899 /* Assets.xcassets */; };
 		65B9C49E1DD8178700042899 /* Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C48C1DD8178700042899 /* Info.plist */; };
 		65B9C49F1DD8178700042899 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 65B9C48D1DD8178700042899 /* LaunchScreen.storyboard */; };
+		65B9C4A21DD818AD00042899 /* DUIKitViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65B9C4A11DD818AD00042899 /* DUIKitViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -58,6 +59,8 @@
 		65B9C48D1DD8178700042899 /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		65B9C48E1DD8178700042899 /* UsingFrameworks-Bridging-Header.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UsingFrameworks-Bridging-Header.h"; sourceTree = "<group>"; };
 		65B9C4A01DD817B100042899 /* DXMainViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DXMainViewController-Bridging-Header.h"; sourceTree = "<group>"; };
+		65B9C4A11DD818AD00042899 /* DUIKitViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DUIKitViewController.swift; sourceTree = "<group>"; };
+		65B9C4A31DD8196B00042899 /* DUIKitViewController-Bridging-Header.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "DUIKitViewController-Bridging-Header.h"; sourceTree = "<group>"; };
 		A758681ECEAFB38729850F07 /* Pods-UsingFrameworks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-UsingFrameworks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-UsingFrameworks/Pods-UsingFrameworks.debug.xcconfig"; sourceTree = "<group>"; };
 		BA0A5B58D15478AD185335A9 /* libPods-UsingFrameworks.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-UsingFrameworks.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -206,6 +209,8 @@
 		65B9C47C1DD8178700042899 /* UIKit */ = {
 			isa = PBXGroup;
 			children = (
+				65B9C4A11DD818AD00042899 /* DUIKitViewController.swift */,
+				65B9C4A31DD8196B00042899 /* DUIKitViewController-Bridging-Header.h */,
 				65B9C47D1DD8178700042899 /* ChildViewController */,
 				65B9C4851DD8178700042899 /* UILabel */,
 			);
@@ -396,6 +401,7 @@
 				65B9C4931DD8178700042899 /* DXSimpleTableView.swift in Sources */,
 				65B9C49A1DD8178700042899 /* DLabelWithAttributedStringVC.swift in Sources */,
 				65B9C4921DD8178700042899 /* UIViewController+DXTransition.m in Sources */,
+				65B9C4A21DD818AD00042899 /* DUIKitViewController.swift in Sources */,
 				65B9C48F1DD8178700042899 /* AppDelegate.m in Sources */,
 				65B9C4961DD8178700042899 /* DBeautyVC.m in Sources */,
 				65B9C4951DD8178700042899 /* DXSimpleTableViewSectionInfo.swift in Sources */,

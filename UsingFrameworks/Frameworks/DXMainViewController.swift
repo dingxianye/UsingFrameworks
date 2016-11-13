@@ -44,50 +44,9 @@ class DXMainViewController : UIViewController {
                 cellInfos: [
                     DXSimpleTableViewCellInfo.init(titleText: "UIKit", selectedBlock: {
                         [weak self] ()->() in
-                        self?.pushViewCtl(viewCtl: DLabelWithAttributedStringVC.init())
-                    }),
-                    DXSimpleTableViewCellInfo.init(titleText: "UILabel", selectedBlock: {
-                        [weak self] ()->() in
-                            self?.pushViewCtl(viewCtl: DLabelWithAttributedStringVC.init())
-                    }),
-                ]
-            ),
-            
-            DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "OpenSource UI Frameworks",
-                cellInfos: [
-                    
-                ]
-            ),
-            
-            DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "Layout & Tricks",
-                cellInfos: [
-                    
-                ]
-            ),
-            
-            DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "System None-UI Frameworks",
-                cellInfos: [
-                    
-                ]
-            ),
-            
-            DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "OpenSource None-UI Frameworks",
-                cellInfos: [
-                    
-                ]
-            ),
-            
-            DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "Tmp",
-                cellInfos: [
-                    DXSimpleTableViewCellInfo.init(titleText: "Child View Controllers", selectedBlock: {
-                        [weak self] ()->() in
-                            let vc = UIStoryboard.init(name: "DDifferentPageVC", bundle: Bundle.init(for: DDifferentPageVC.classForCoder())).instantiateInitialViewController()
-                            self?.pushViewCtl(viewCtl: vc)
+                        let vc = DUIKitViewController.init()
+                        vc.title = "UIKit"
+                        self?.pushViewCtl(viewCtl: vc)
                     }),
                 ]
             ),

@@ -9,6 +9,5 @@
 #ifndef DXMainViewController_Bridging_Header_h
 #define DXMainViewController_Bridging_Header_h
 
-#import "DDifferentPageVC.h"
 
 #endif /* DXMainViewController_Bridging_Header_h */

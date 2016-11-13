@@ -4,3 +4,4 @@
 
 
 #import "DXMainViewController-Bridging-Header.h"
+#import "DUIKitViewController-Bridging-Header.h"
