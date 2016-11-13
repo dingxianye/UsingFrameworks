@@ -10,6 +10,7 @@
 #import "DBeautyVC.h"
 #import "DHandsomeVC.h"
 #import "UIViewController+DXTransition.h"
+#import "UsingFrameworks-Swift.h"
 
 @interface DDifferentPageVC ()
 
@@ -27,8 +28,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     
+    
+    // 可以实例为任何其它的controller，包括DDifferentPageVC，但是只是显示出来而已   TODO: why can't use DDifferentPageVC
     _beautyVC = [DBeautyVC new];
+//    _beautyVC = [DXMainViewController new];   // just like DXMainViewController
     _handsomeVC = [DHandsomeVC new];
+    
     
     [_beautyBtn addTarget:self action:@selector(beautyBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_handsomeBtn addTarget:self action:@selector(handsomeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
