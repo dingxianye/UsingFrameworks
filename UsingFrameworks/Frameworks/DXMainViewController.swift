@@ -40,9 +40,16 @@ class DXMainViewController : UIViewController {
         contentInfos = [
         
             DXSimpleTableViewSectionInfo.init(
-                clazzTitle: "System UI Frameworks",
+                clazzTitle: "UI Frameworks",
                 cellInfos: [
-                    
+                    DXSimpleTableViewCellInfo.init(titleText: "UIKit", selectedBlock: {
+                        [weak self] ()->() in
+                        self?.pushViewCtl(viewCtl: DLabelWithAttributedStringVC.init())
+                    }),
+                    DXSimpleTableViewCellInfo.init(titleText: "UILabel", selectedBlock: {
+                        [weak self] ()->() in
+                            self?.pushViewCtl(viewCtl: DLabelWithAttributedStringVC.init())
+                    }),
                 ]
             ),
             

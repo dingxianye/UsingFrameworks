@@ -32,6 +32,8 @@
     
     [_beautyBtn addTarget:self action:@selector(beautyBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
     [_handsomeBtn addTarget:self action:@selector(handsomeBtnClicked:) forControlEvents:UIControlEventTouchUpInside];
+    
+    [self beautyBtnClicked:nil];
 }
 
 - (void)beautyBtnClicked:(id)sender {
@@ -39,7 +41,7 @@
 }
 
 - (void)handsomeBtnClicked:(id)sender {
-    [self transitionToViewController:_handsomeVC viewControllerBaseView:_containerView];
+    [self transitionToViewController:_handsomeVC viewControllerBaseView:_containerView duration:.3 options:UIViewAnimationOptionTransitionCrossDissolve animation:nil];
 }
 
 

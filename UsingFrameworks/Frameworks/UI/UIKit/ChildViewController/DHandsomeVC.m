@@ -1,23 +1,23 @@
 //
-//  DBeautyVC.m
+//  DHandsomeVC.m
 //  UsingFrameworks
 //
 //  Created by Derek on 2016/11/12.
 //  Copyright © 2016年 DXY. All rights reserved.
 //
 
-#import "DBeautyVC.h"
+#import "DHandsomeVC.h"
 
-@interface DBeautyVC ()
+@interface DHandsomeVC ()
 
 @end
 
-@implementation DBeautyVC
+@implementation DHandsomeVC
 
 - (void)viewDidLoad {
     [super viewDidLoad];
     
-    self.view.backgroundColor = [UIColor blueColor];
+    self.view.backgroundColor = [UIColor darkGrayColor];
 }
 
 - (void)didReceiveMemoryWarning {
