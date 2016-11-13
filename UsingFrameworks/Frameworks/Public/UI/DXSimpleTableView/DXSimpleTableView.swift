@@ -24,8 +24,7 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         self.delegate = self
         self.dataSource = self
         
-        self.rowHeight = 44;
-        self.register(UITableViewCell.classForCoder(), forCellReuseIdentifier: "cell")
+        self.rowHeight = UITableViewAutomaticDimension
     }
     
     required init?(coder aDecoder: NSCoder) {
@@ -49,10 +48,26 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         let sectionInfo = sectionInfos[indexPath.section]
         let cellInfo = sectionInfo.cellInfos[indexPath.row]
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "cell", for: indexPath)
+        var cell: UITableViewCell!
+        if let _ = cellInfo.detailText {
+            cell = tableView.dequeueReusableCell(withIdentifier: "cell-subtitle")
+            if let _ = cell {
+            } else {
+                cell = UITableViewCell.init(style: UITableViewCellStyle.subtitle, reuseIdentifier: "cell-subtitle")
+                cell.detailTextLabel?.textColor = UIColor.gray
+            }
+        } else {
+            cell = tableView.dequeueReusableCell(withIdentifier: "cell-default")
+            if let _ = cell {
+            } else {
+                cell = UITableViewCell.init(style: UITableViewCellStyle.default, reuseIdentifier: "cell-default")
+            }
+        }
         
         cell.textLabel?.text = cellInfo.titleText
-        cell.detailTextLabel?.text = cellInfo.detailText
+        if let _ = cellInfo.detailText {
+            cell.detailTextLabel?.text = cellInfo.detailText
+        }
         cell.accessoryType = .none
         if cellInfo.selectedBlock != nil {
             cell.accessoryType = .disclosureIndicator
