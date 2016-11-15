@@ -45,6 +45,8 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         return sectionInfo.cellInfos.count
     }
     
+    // FIXME: 这里tableView有个self-sizing的疑似bug，detailTextLabel多行显示的时候，height会计算少（http://stackoverflow.com/questions/28931295/self-sizing-dynamic-height-cells-in-ios-8-possible-without-custom-uitablevie），所以我还是得自行计算一下高度
+    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let sectionInfo = sectionInfos[indexPath.section]
         let cellInfo = sectionInfo.cellInfos[indexPath.row]
@@ -66,6 +68,7 @@ class DXSimpleTableView: UITableView, UITableViewDelegate, UITableViewDataSource
         }
         
         cell.textLabel?.numberOfLines = 0
+        cell.detailTextLabel?.numberOfLines = 0
         
         if let _ = cellInfo.titleText {
             cell.textLabel?.text = cellInfo.titleText
