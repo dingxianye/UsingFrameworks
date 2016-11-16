@@ -118,7 +118,19 @@ class DLabelWithAttributedStringVC: UIViewController {
         return self.prefixTitle(title: "NSKernAttributeName (字间距）", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
     
-    // NSStrikethroughStyleAttributeName    删除线
+    // MARK: NSStrikethroughStyleAttributeName    删除线
+    func strikethroughStyleAttributeNameAttributedString() -> NSAttributedString! {
+        let mutAttributedString = NSMutableAttributedString.init()
+        
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 0), text: "0就是没有删除线\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 1), text: "一条删除线\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 2), text: "两条删除线\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 3), text: "3条删除线\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 10), text: "10条删除线\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSStrikethroughStyleAttributeName, attributeValue: NSNumber.init(value: 100), text: "10条删除线"))
+        
+        return self.prefixTitle(title: "NSStrikethroughStyleAttributeName (删除线）", attributedString: mutAttributedString.copy() as! NSAttributedString)
+    }
     
     // NSUnderlineStyleAttributeName    下划线
     
