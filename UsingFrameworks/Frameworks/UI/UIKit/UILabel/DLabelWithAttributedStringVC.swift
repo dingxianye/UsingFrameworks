@@ -107,7 +107,16 @@ class DLabelWithAttributedStringVC: UIViewController {
     
     // NSLigatureAttributeName
     
-    // NSKernAttributeName  字间距
+    // MARK: NSKernAttributeName  字间距
+    func kernAttributeNameAttributedString() -> NSAttributedString! {
+        let mutAttributedString = NSMutableAttributedString.init()
+        
+        mutAttributedString.append(self.attributedString(attributeName: NSKernAttributeName, attributeValue: NSNumber.init(value: 0), text: "这是默认字间距\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSKernAttributeName, attributeValue: NSNumber.init(value: 5.5), text: "这是5.5的字间距\n"))
+        mutAttributedString.append(self.attributedString(attributeName: NSKernAttributeName, attributeValue: NSNumber.init(value: 11), text: "这是11的字间距"))
+        
+        return self.prefixTitle(title: "NSKernAttributeName (字间距）", attributedString: mutAttributedString.copy() as! NSAttributedString)
+    }
     
     // NSStrikethroughStyleAttributeName    删除线
     
