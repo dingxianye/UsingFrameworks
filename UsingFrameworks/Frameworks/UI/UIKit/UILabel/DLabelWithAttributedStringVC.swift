@@ -62,9 +62,7 @@ class DLabelWithAttributedStringVC: UIViewController {
     
     
     
-    // MARK: attributedString demos
-    
-    // NSFontAttributeName
+    // MARK: NSFontAttributeName      字体
     func fontAttributeNameAttributedString() -> NSAttributedString! {
         let mutAttributedString = NSMutableAttributedString.init()
         
@@ -74,12 +72,12 @@ class DLabelWithAttributedStringVC: UIViewController {
         mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.systemFont(ofSize: 26), text: "看起来"))
         mutAttributedString.append(self.attributedString(attributeName: NSFontAttributeName, attributeValue: UIFont.italicSystemFont(ofSize: 30), text: "不一样！！！"))  // FIXME: italic Chinese
         
-        return self.prefixTitle(title: "NSFontAttributeName", attributedString: mutAttributedString.copy() as! NSAttributedString)
+        return self.prefixTitle(title: "NSFontAttributeName (字体)", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
     
     // NSParagraphStyleAttributeName
     
-    // NSForegroundColorAttributeName
+    // MARK: NSForegroundColorAttributeName       前景色（文字颜色）
     func foregroundColorAttributeNameAttributedString() -> NSAttributedString! {
         let mutAttributedString = NSMutableAttributedString.init()
         
@@ -89,10 +87,10 @@ class DLabelWithAttributedStringVC: UIViewController {
         mutAttributedString.append(self.attributedString(attributeName: NSForegroundColorAttributeName, attributeValue: UIColor.green, text: "看起来"))
         mutAttributedString.append(self.attributedString(attributeName: NSForegroundColorAttributeName, attributeValue: UIColor.orange, text: "不一样！！！"))
         
-        return self.prefixTitle(title: "NSForegroundColorAttributeName", attributedString: mutAttributedString.copy() as! NSAttributedString)
+        return self.prefixTitle(title: "NSForegroundColorAttributeName (前景色)", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
     
-    // NSBackgroundColorAttributeName
+    // MARK: NSBackgroundColorAttributeName       背景色（底色）
     func backgroundColorAttributeNameAttributedString() -> NSAttributedString! {
         let mutAttributedString = NSMutableAttributedString.init()
         
@@ -102,7 +100,7 @@ class DLabelWithAttributedStringVC: UIViewController {
         mutAttributedString.append(self.attributedString(attributeName: NSBackgroundColorAttributeName, attributeValue: UIColor.magenta, text: "看起来"))
         mutAttributedString.append(self.attributedString(attributeName: NSBackgroundColorAttributeName, attributeValue: UIColor.green, text: "不一样！！！"))
         
-        return self.prefixTitle(title: "NSBackgroundColorAttributeName", attributedString: mutAttributedString.copy() as! NSAttributedString)
+        return self.prefixTitle(title: "NSBackgroundColorAttributeName (背景色）", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
     
     // NSLigatureAttributeName
@@ -132,20 +130,20 @@ class DLabelWithAttributedStringVC: UIViewController {
         return self.prefixTitle(title: "NSStrikethroughStyleAttributeName (删除线）", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
     
-    // NSUnderlineStyleAttributeName    下划线
+    // MARK: NSUnderlineStyleAttributeName    下划线
     
     
-    // NSStrokeColorAttributeName & NSStrokeWidthAttributeName
+    // MARK: NSStrokeColorAttributeName     文字轮廓颜色
+    //       NSStrokeWidthAttributeName     文字轮廓宽度
     func strokeColorStrokeWidthAttributeNameAttributedString() -> NSAttributedString! {
         let mutAttributedString = NSMutableAttributedString.init()
         
-        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.red, NSStrokeWidthAttributeName: Float(1)], text: "YES, "))
-        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.blue, NSStrokeWidthAttributeName: Float(2)], text: "就要和外面那些"))
-        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.purple, NSStrokeWidthAttributeName: Float(3)], text: "妖艳贱货"))
-        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.green, NSStrokeWidthAttributeName: Float(4)], text: "看起来"))
-        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.orange, NSStrokeWidthAttributeName: Float(5)], text: "不一样！！！"))
+        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.red, NSStrokeWidthAttributeName: Float(1)], text: "文字轮廓宽度为 1\n"))
+        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.blue, NSStrokeWidthAttributeName: Float(4)], text: "文字轮廓宽度为 4\n"))
+        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.purple, NSStrokeWidthAttributeName: Float(8)], text: "文字轮廓宽度为 4\n"))
+        mutAttributedString.append(self.attributedString(attributes: [NSStrokeColorAttributeName: UIColor.orange, NSStrokeWidthAttributeName: Float(16)], text: "文字轮廓宽度为 16"))
         
-        return self.prefixTitle(title: "NSStrokeColorAttributeName\nNSStrokeWidthAttributeName", attributedString: mutAttributedString.copy() as! NSAttributedString)
+        return self.prefixTitle(title: "NSStrokeColorAttributeName (文字轮廓颜色)\nNSStrokeWidthAttributeName (文字轮廓宽度/粗细)", attributedString: mutAttributedString.copy() as! NSAttributedString)
     }
 
     // NSShadowAttributeName    阴影
