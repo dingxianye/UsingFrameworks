@@ -42,6 +42,18 @@ class DUIKitViewController: UIViewController {
             ),
             
             DXSimpleTableViewSectionInfo.init(
+                clazzTitle: "UITextView",
+                cellInfos: [
+                    DXSimpleTableViewCellInfo.init(titleText: "Rich Text View", selectedBlock: {
+                        [weak self] ()->() in
+                        let vc = DRichTextViewVC.init()
+                        vc.title = "Rich Text View"
+                        self?.pushViewCtl(viewCtl: vc)
+                    }),
+                    ]
+            ),
+            
+            DXSimpleTableViewSectionInfo.init(
                 clazzTitle: "Child View Controllers",
                 cellInfos: [
                     DXSimpleTableViewCellInfo.init(titleText: "Beauty & Handsome", detailText: "Transition from one child view controller to another", selectedBlock: {

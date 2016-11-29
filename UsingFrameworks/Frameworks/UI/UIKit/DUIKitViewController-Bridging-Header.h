@@ -10,5 +10,6 @@
 #define DUIKitViewController_Bridging_Header_h
 
 #import "DDifferentPageVC.h"
+#import "DRichTextViewVC.h"
 
 #endif /* DUIKitViewController_Bridging_Header_h */
